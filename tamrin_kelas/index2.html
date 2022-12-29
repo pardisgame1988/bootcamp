@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    
+  </body>
+  </html>
+
+   
+    
+</head>
+
+
+
+
+
+
+<script>
+  
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", "index.php");
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(xmlhttp.responseText);
+  for(var i=0;i<myObj.length;i++){
+      var option = document.createElement("option");
+  option.text = myObj[i];
+  option.value = myObj[i];
+  var select = document.getElementById("province");
+  select.appendChild(option);
+    }
+  }
+  }
+  xmlhttp.open("post", "index.php");
+  xmlhttp.send();
+  
+  
+  
+  var xmlhttp2 = new XMLHttpRequest();
+    xmlhttp.open("GET", "index3.php");
+  xmlhttp2.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj2 = JSON.parse(xmlhttp2.responseText);
+      for(var j=0;j<myObj2.length;j++){
+      var option = document.createElement("option");
+  option.text = myObj2[j];
+  option.value = myObj2[j];
+  var select = document.getElementById("city");
+  select.appendChild(option);
+    }
+  }
+  }
+  xmlhttp2.open("post", "index3.php");
+  xmlhttp2.send();
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", "index.php");
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(xmlhttp.responseText);
+  for(var i=0;i<myObj.length;i++){
+      var option = document.createElement("option");
+  option.text = myObj[i];
+  option.value = myObj[i];
+  var select = document.getElementById("province");
+  select.appendChild(option);
+    }
+  }
+  }
+  xmlhttp.open("post", "index.php");
+  xmlhttp.send();
+  
+  
+  
+  </script>
+
+
+<script >
+ 
+
+ function my2(){
+  
+
+  const myNode = document.getElementById("city");
+while (myNode.firstChild) {
+  myNode.removeChild(myNode.lastChild);
+
+  var xmlhttp2 = new XMLHttpRequest();
+   
+  var xmlhttp2 = new XMLHttpRequest();
+    xmlhttp.open("GET", "index3.php");
+  xmlhttp2.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj2 = JSON.parse(xmlhttp2.responseText);
+      for(var j=0;j<myObj2.length;j++){
+      var option = document.createElement("option");
+  option.text = myObj2[j];
+  option.value = myObj2[j];
+  var select = document.getElementById("city");
+  select.appendChild(option);
+    }
+  }
+  }
+  xmlhttp2.open("post", "index3.php");
+  xmlhttp2.send();
+
+}}
+
+
+
+
+
+
+
+
+
+  function my(){
+  
+
+    const myNode = document.getElementById("city");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.lastChild);
+
+    var xmlhttp3 = new XMLHttpRequest();
+    xmlhttp3.open("GET", "index2.php");
+  xmlhttp3.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj3 = JSON.parse(xmlhttp3.responseText);
+      
+      for( k=0;k<myObj3.length;k++){
+      var option = document.createElement("option");
+  option.text = myObj3[k];
+  option.value = myObj3[k];
+  var select = document.getElementById("city");
+  select.appendChild(option);
+    }
+  }}
+  }
+  xmlhttp3.open("post", "index2.php");
+  xmlhttp3.send();
+ 
+ }
+ 
+</script>
+<body>
+  <p id="demo"></p>
+   
+  
+
+
+    
+<div class="container">
+    <p>ثبت نام</p>
+    <hr>
+    <div class="col-6  ">
+    <input class="form-control" type="text" placeholder="اسم" >   
+    <input class="form-control"  type="tel" placeholder="موبایل" >  
+    <input class="form-control"  type="email" placeholder="ایمیل">  
+    <div >
+    
+    <select name="" id="province"  onchange="my()" onclick="my2()">
+     
+ 
+      
+    </select>
+  
+    <select name="" id="city">
+    
+      
+    </select>
+       
+          
+          <input type="submit" value="ثبت">
+      </div>  
+    
+   
+
+</div> 
+</body>
+
+
+  
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        * {
+            font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: .94rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #aaa;
+            text-align: left;
+            background-color: #8685855f;
+        }
+
+        [tabindex="-1"]:focus:not(:focus-visible) {
+            outline: 0 !important;
+        }
+
+        h1 {
+            color: SeaGreen;
+        }
+
+        p,
+        li {
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(144, 141, 141, 0.441);
+            left: 0;
+            right: 0;
+            z-index: 99999;
+            display: none;
+        }
+
+        #popup {
+            background: #fff;
+            padding: 20px;
+            max-width: 520px;
+            margin: 20% auto;
+            position: relative;
+            color: #0e0e0e;
+        }
+
+        .close {
+            position: absolute;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 5;
+        }
+    </style>
+    <script>
+        var delay_popup = 3000;setTimeout("document.getElementById('overlay').style.display='block'", delay_popup)
+    </script>
+
+</head>
+
+<body>
+    <div id="overlay">
+        <div id="popup">
+        <h1>آیا موافقید ثبت نام انجام شود؟</h1>
+        
+        <form action="http://localhost:8081/tamrin_kelas/index2.html"><input type="submit" value="بله" ></form>
+        <input type="button" class="close" value="خیر" onclick="document.getElementById('overlay').style.display='none'">&times;></p>
+        
+        </div>
+        
+           </div>
+</body>
+
+</html>
